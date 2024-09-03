@@ -1,0 +1,80 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: qmeasure
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Michael
+    family-names: Reiter
+  - given-names: Daniel
+    family-names: Weiß
+  - given-names: Christian
+    family-names: Gusenbauer
+  - given-names: Marco
+    family-names: Erler
+  - given-names: Christoph
+    family-names: Kuhn
+  - given-names: Stefan
+    family-names: Kasperl
+  - given-names: Johann
+    family-names: Kastner
+    affiliation: Upper Austrian University of Applied Sciences (FH OÖ)
+  - given-names: Patrick
+    family-names: Weinberger
+    affiliation: Upper Austrian University of Applied Sciences (FH OÖ)
+    orcid: 'https://orcid.org/0000-0002-7274-5365'
+  - given-names: Bernhard
+    family-names: Fröhler
+    affiliation: Upper Austrian University of Applied Sciences (FH OÖ)
+    orcid: 'https://orcid.org/0000-0003-1271-0838'
+  - given-names: Lukas
+    family-names: Behammer
+    affiliation: Upper Austrian University of Applied Sciences (FH OÖ)
+    orcid: 'https://orcid.org/0009-0008-5081-0753'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13645122
+repository-code: 'https://github.com/3dct/qmeasure'
+abstract: >-
+  The Q measure is an image quality measure, intended for
+  evaluating computed tomography (CT) scans. It is computed
+  based on peaks detected in the histogram of a CT volume.
+keywords:
+  - X-ray computed tomography
+  - image quality measure
+  - histogram
+license: GPL-3.0-or-later
+preferred-citation:
+  type: conference-paper
+  authors:
+  - given-names: Michael
+    family-names: Reiter
+  - given-names: Daniel
+    family-names: Weiß
+  - given-names: Christian
+    family-names: Gusenbauer
+  - given-names: Marco
+    family-names: Erler
+  - given-names: Christoph
+    family-names: Kuhn
+  - given-names: Stefan
+    family-names: Kasperl
+  - given-names: Johann
+    family-names: Kastner
+  url: https://www.ndt.net/?id=15715
+  journal: e-Journal of Nondestructive Testing
+  issn: 1435-4934
+  title: Evaluation of a Histogram-based Image Quality Measure for X-ray computed Tomography
+  conference: 
+    name: 5th Conference on Industrial Computed Tomography (iCT) 2014
+    city: Wels
+    country: AT
+    date-start: 2014-02-25
+    date-end: 2014-02-28
+  issue: 6
+  volume: 19
+  year: 2014
