@@ -2,7 +2,15 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include <QMeasureCalculation.h>
 #include <ImageHistogram.h>
-#include <format>
+
+#include <sstream>
+
+std::string fullMeasureName(std::string measure, int peakNr)
+{
+	std::ostringstream oss;
+	oss << "Peak " << peakNr << " " << measure;
+	return oss.str();
+}
 
 std::map<std::string, double> QMeasureCalculation::computeOrigQ(
 	float* fImage, const int* dim, const double* range, int HistogramBins, int NumberPeaks, bool AnalyzePeak = false)
@@ -38,12 +46,12 @@ std::map<std::string, double> QMeasureCalculation::computeOrigQ(
 		int classNr = 0;
 		for (auto c : classMeasures)
 		{
-			results.insert({std::format("Peak {} Mean", classNr), c.mean});
-			results.insert({std::format("Peak {} Sigma",classNr), c.sigma});
-			results.insert({std::format("Peak {} Probability",classNr), c.probability});
-			results.insert({std::format("Peak {} Min",classNr), c.LowerThreshold});
-			results.insert({std::format("Peak {} Max",classNr), c.UpperThreshold});
-			results.insert({std::format("Peak {} Usage",classNr), c.UsedForQ});
+			results.insert({fullMeasureName("Mean", classNr), c.mean});
+			results.insert({fullMeasureName("Sigma",classNr), c.sigma});
+			results.insert({fullMeasureName("Probability",classNr), c.probability});
+			results.insert({fullMeasureName("Min",classNr), c.LowerThreshold});
+			results.insert({fullMeasureName("Max",classNr), c.UpperThreshold});
+			results.insert({fullMeasureName("Usage",classNr), c.UsedForQ});
 			++classNr;
 		}
 	}
